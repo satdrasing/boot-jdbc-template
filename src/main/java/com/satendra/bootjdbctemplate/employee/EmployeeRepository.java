@@ -1,6 +1,5 @@
 package com.satendra.bootjdbctemplate.employee;
 
-import com.satendra.bootjdbctemplate.employee.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;

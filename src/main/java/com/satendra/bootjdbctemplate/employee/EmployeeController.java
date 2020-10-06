@@ -18,22 +18,22 @@ public class EmployeeController {
     private EmployeeRepository employeeRepository;
 
     @GetMapping("/employees")
-    List<Employee> getAllEmployee(){
+    public List<Employee> getAllEmployee(){
         return employeeRepository.readEmployee();
     }
 
     @PostMapping("/employees")
-    Employee psotEmployee(@RequestBody Employee employee){
+    public Employee psotEmployee(@RequestBody Employee employee){
         return employeeRepository.createEmployee(employee);
     }
 
     @PostMapping("/employees/{id}")
-    Employee updateEmployee(@RequestBody Employee employee, @PathVariable Long id){
+    public Employee updateEmployee(@RequestBody Employee employee, @PathVariable Long id){
         return employeeRepository.updateEmployee(employee,id);
     }
 
     @DeleteMapping("/employees/{id}")
-    Employee deleteEmployee(@PathVariable Long id){
+    public Employee deleteEmployee(@PathVariable Long id){
         return employeeRepository.deleteEmployee(id);
     }
 
